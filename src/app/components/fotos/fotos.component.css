@@ -1,0 +1,18 @@
+.center{
+	text-align: center;
+	padding: 20px;
+}
+
+.titulo{
+	font-size: 1em;
+	margin-bottom: 20px;
+	text-align: center;
+	color: green;
+	padding: 10px;
+}
+
+img{
+	border-radius: 10px;
+	cursor: pointer;
+}
+

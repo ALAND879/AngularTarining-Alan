@@ -1,0 +1,14 @@
+img {
+  height: 350px;
+  width: 300px;
+}
+
+.title {
+  font-size: 2.5em;
+  color: rgb(0, 61, 244);
+}
+
+.tag {
+  color: rgb(166, 0, 255);
+  font-size: 1.8em;
+}

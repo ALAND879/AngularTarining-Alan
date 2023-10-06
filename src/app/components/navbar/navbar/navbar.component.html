@@ -1,0 +1,13 @@
+<nav class="navbar bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <form class="d-flex" role="search">
+      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+      <button [ngClass]="styles.button" type="submit">Perfil</button>
+    </form>
+    <a [routerLink]="['home']">Home</a>
+    <a [routerLink]="['about']">About</a>
+    <a [routerLink]="['User-list']">Usuarios</a>
+    <a [routerLink]="['productos']">Productos</a>
+  </div>
+</nav>

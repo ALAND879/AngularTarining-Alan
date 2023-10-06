@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="row text-center">
+     <h4 class="font-weight-bold title m-4">
+         {{product.title}}
+     </h4>
+    </div>
+    <div class="row">
+         <div class="col col-md-4">
+             <img [src]="product.image" [alt]="product.title">
+         </div>
+         <div class="col col-md-8 ml-6 mt-4">
+             <h6 class="tag">Description</h6>
+             <p>{{product.description}}</p>
+             <div class="row">
+                 <div class="col">
+                     <h6 class="tag">Category</h6>
+                     <h6 class="font-weight-light">{{product.category}}</h6>
+                 </div>
+                 <div class="col">
+                     <h6 class="tag">Price</h6>
+                     <h6 class="font-weight-light">$125</h6>
+                 </div>
+                 <div class="col">
+                     <h6 class="tag">Rating</h6>
+                     <h6 class="font-weight-light">{{product.rating.count}} reviews</h6>
+                 </div>
+             </div>
+             <div class="row text-center">
+                 <div class="mt-4">
+                     <button class="btn btn-warning col-md-6">Buy now</button>
+                 </div>
+             </div>
+         </div>
+    </div>
+ </div>

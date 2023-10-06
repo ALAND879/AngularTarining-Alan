@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="row">
+        <div class="col col-md-8">
+            <h1>Users List</h1>
+            <div class="list-group" *ngIf="users.length>0">
+                <div *ngFor="let user of users" class="list-group-item d-flex justify-content-between">
+                    <li class=""> {{user.id}} - {{user.name}} </li>
+                    <button class="btn btn-danger" (click)="removeUser(user.id)">Delete</button>
+                </div>
+            </div>
+            <div *ngIf="users.length==0">
+                <h1>No current Users</h1>
+            </div>
+        </div>
+        <div class="col col-md-4">
+            <form [formGroup]="createUserForm" (ngSubmit)="addUser()">
+                <div class="mb-3">
+                    <label for="userName" class="form-label">Name</label>
+                    <input type="text" class="form-control" formControlName="name">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Email address</label>
+                    <input type="email" class="form-control" formControlName="email">
+                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                </div>
+                <button class="btn btn-primary">
+                    Agregar nuevo usuario
+                </button>
+            </form>
+        </div>
+    </div>
+</div>

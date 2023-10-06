@@ -1,0 +1,23 @@
+<div class="card">
+    <div class="card-body">
+      <div class="card-img-actions">
+        <img [src]="product.image" class="card-img rounded mx-auto d-block">
+      </div>
+    </div>
+    <div class="card-body bg-light text-center">
+      <div class="mb-2">
+        <h5 class="font-weight-semibold mb-2">
+          {{product.title}}
+        </h5>
+        <h6 class="text-muted">{{product.category}}</h6>
+      </div>
+      <h3 class="mb-0 font-weight-semibold">$100</h3>
+      <div class="text-muted mb-3">{{product.rating.count}} reviews</div>
+      <button type="button" class="btn bg-cart" (click)="goToDetails(product.id)">
+        <a>Ver Producto Desde Componente</a>
+      </button>
+      <button class="btn btn-primary" [routerLink]="['/products/', product.id]">
+        <a>Ver Producto Desde HTML</a>
+      </button>
+    </div>
+  </div>
