@@ -18,4 +18,8 @@ export class FotosService {
     return this.http.get<Fotos[]>(this.url);
   }
 
+  getImage(id: number): Observable<Fotos>{
+    const url = this.url + "/" + id;
+    return this.http.get<Fotos>(url);
+  }
 }

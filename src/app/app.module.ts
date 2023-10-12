@@ -16,6 +16,7 @@ import { ProductsComponent } from './components/products/list/products.component
 import { ViewProductDetailsComponent } from './components/products/view-product-details/view-product-details.component';
 import { ProductCardComponent } from './components/products/product-card/product-card.component';
 import { FotosComponent } from './components/fotos/fotos.component';
+import { ViewFotoDetailsComponent } from './components/view-foto-details/view-foto-details.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { FotosComponent } from './components/fotos/fotos.component';
     ViewProductDetailsComponent,
     ProductCardComponent,
     FotosComponent,
+    ViewFotoDetailsComponent,
   ],
   imports: [
     BrowserModule,

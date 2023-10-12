@@ -25,4 +25,8 @@ export class FotosComponent {
     });
   }
 
+  gotoDetails(id:number) {
+    this.router.navigate(['fotos/', id])
+  }
+
 }

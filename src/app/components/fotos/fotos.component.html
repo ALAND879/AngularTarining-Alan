@@ -4,9 +4,23 @@
 		<div class="center">
 			<img [src]="foto.thumbnailUrl" alt="">
 		</div>
+
+		<div class="center">
+			<button type="button" class="btn bg-info" (click) = gotoDetails(foto.id)> Ver foto desde componentes </button>
+			</div>
+
+			<div class="center">
+				<button class="btn bg-info"[routerLink]="['/fotos/',foto.id]">Ver foto desde HTML</button>
+			</div>
+			
+		
+
 			<div class="card-img-action">
 				<h6 class="titulo"> {{foto.title}} </h6>
 			</div>
+			
+			
+
 		</div>
 	</div>
 </div>
