@@ -8,6 +8,7 @@ import { ProductsComponent } from './components/products/list/products.component
 import { ViewProductDetailsComponent } from './components/products/view-product-details/view-product-details.component';
 import { FotosComponent } from './components/fotos/fotos.component';
 import { ViewFotoDetailsComponent } from './components/view-foto-details/view-foto-details.component';
+import { LoginComponent } from './Pages/login/login.component';
 
 const routes: Routes = [
   {path:'', redirectTo:'/home', pathMatch:'full'},
@@ -18,7 +19,8 @@ const routes: Routes = [
   {path:'products',component:ProductsComponent},
   { path: 'products/:id', component: ViewProductDetailsComponent },
   { path: 'fotos', component: FotosComponent },
-  { path: 'fotos/:id', component: ViewFotoDetailsComponent},
+  { path: 'fotos/:id', component: ViewFotoDetailsComponent },
+  { path: 'auth/signin', component:LoginComponent},
   {path:'**', redirectTo:'/404'}
 ];
 

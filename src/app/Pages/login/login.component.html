@@ -1,0 +1,48 @@
+<div class="container">
+	<div class="row justify-content-center mt-5">
+		<div class="col-md-6">
+			<div class="card">
+				<div class="card-header text-center">
+					<h4>Login</h4>
+				</div>
+				<div class="card-body">
+					<form [formGroup]="loginForm" (ngSubmit)="login()">
+						<div class="form-group">
+							<label for="username">Email</label>
+							<input type="text" class="form-control" formControlName="email" placeholder="Enter your username">
+
+							<div class="" *ngIf="(email.invalid && email.touched) || email.dirty">
+								<div class= "text-danger" *ngIf="email.errors?.['required']">
+									Email cant be empty.
+								</div>
+								<div *ngIf="email.errors?.['email']">
+									Invalid Email
+								</div>
+								<div *ngIf="email.errors?.['untouched']">
+									Email cant be empty, enter an Email.
+								</div>
+							</div>
+
+						</div>
+						<div class="form-group">
+							<label for="password">Password</label>
+							<input type="password" class="form-control" formControlName="password" placeholder="Enter your password">
+
+							<div class="" *ngIf=" password.touched || password.dirty">
+								<div *ngIf="password.errors?.['required']">
+									Password cant be empty.
+								</div>
+								<div *ngIf="password.errors?.['minLength']">
+									Not enough characters (8 minimum)
+								</div>
+								
+							</div>
+
+						</div>
+						<button type="submit" class="btn btn-primary btn-block">Login</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
